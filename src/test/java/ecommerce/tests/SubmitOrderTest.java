@@ -23,7 +23,7 @@ public class SubmitOrderTest extends BaseTest{
 	@Test (dataProvider = "getData", retryAnalyzer = Retry.class)
 	public void purchaseOrder(HashMap<String, String> input) throws IOException, InterruptedException
 	{		
-		
+		//login
 		ProductCatalog productcatalog = landingPage.LoginApplication(input.get("email"), input.get("password"));
 
 		List<WebElement> products = productcatalog.getProductList();
